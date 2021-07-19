@@ -1,17 +1,21 @@
-import { Link } from 'react-router-dom';
-import { Screen } from '../constants/index';
+import { PageHeader, Avatar } from 'antd';
+
+import './style.css';
 
 const Header = () => {
   return (
-    <div>
-      <ul>
-        {/* <li>
-          <Link to={Screen.Home}>Home</Link>
-        </li>
-        <li>
-          <Link to={Screen.About}>About</Link>
-        </li> */}
-      </ul>
+    <div className="header">
+      <PageHeader
+        avatar={
+          <Avatar
+            size={40}
+            src="http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg?w=144"
+          />
+        }
+        backIcon={false}
+        className="header__title"
+        title="TO DO LIST APPLICATION"
+      />
     </div>
   );
 };
